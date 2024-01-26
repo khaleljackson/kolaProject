@@ -14,7 +14,7 @@
     <!-- Include Bootstrap4 File -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css.map">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 <body>
     @include('elements.navbar')
@@ -23,6 +23,7 @@
 
     @include('elements.footer')
     <!-- script File -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>

@@ -21,7 +21,7 @@
 
 // Route::post('/contact','pagesController@submit_contact')->name('send');
 
-Route::get('/','mainController@index')->name('homepage');
+Route::get('/','mainController@index')->name('homepage');//->middleware('auth'); //Protected
 Route::get('/{id}','mainController@show')->name('details');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -30,6 +30,5 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/test',function(){
-    return view('auth.login');
-});
+
+Route::get('/home', 'HomeController@index')->name('home');
